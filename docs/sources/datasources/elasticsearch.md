@@ -6,6 +6,8 @@ aliases = ["/docs/grafana/latest/features/datasources/elasticsearch"]
 weight = 325
 +++
 
+Test
+
 # Using Elasticsearch in Grafana
 
 Grafana ships with advanced support for Elasticsearch. You can do many types of simple or complex Elasticsearch queries to
