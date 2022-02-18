@@ -4339,7 +4339,7 @@ __metadata:
     "@mdx-js/react": 1.6.22
     "@monaco-editor/react": 4.3.1
     "@popperjs/core": 2.11.2
-    "@react-aria/button": 3.3.4
+    "@react-aria/button": 3.4.1
     "@react-aria/dialog": 3.1.4
     "@react-aria/focus": 3.5.0
     "@react-aria/menu": 3.3.0
@@ -6884,19 +6884,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-aria/button@npm:3.3.4":
-  version: 3.3.4
-  resolution: "@react-aria/button@npm:3.3.4"
+"@react-aria/button@npm:3.4.1":
+  version: 3.4.1
+  resolution: "@react-aria/button@npm:3.4.1"
   dependencies:
     "@babel/runtime": ^7.6.2
-    "@react-aria/focus": ^3.5.0
-    "@react-aria/interactions": ^3.6.0
-    "@react-aria/utils": ^3.9.0
-    "@react-stately/toggle": ^3.2.3
-    "@react-types/button": ^3.4.1
+    "@react-aria/focus": ^3.5.2
+    "@react-aria/interactions": ^3.8.1
+    "@react-aria/utils": ^3.11.2
+    "@react-stately/toggle": ^3.2.5
+    "@react-types/button": ^3.4.3
   peerDependencies:
     react: ^16.8.0 || ^17.0.0-rc.1
-  checksum: c67f2097bb1d1b4ecd074865451f0a889773ce5ce6a0f92461e95d323a9a58a71339a7e2b457990de8df2cd18478606da2579b424806c6785b1088f462083a5f
+  checksum: 54612f82b351bb46aeb511fe6d879e5ddcffcbaf3510a0224136071272fb539d5ee8363ea6f8979766d23213cbad1dc44656bced2e03e75f16f1c0e355b3718c
   languageName: node
   linkType: hard
 
@@ -6930,6 +6930,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-aria/focus@npm:^3.5.2":
+  version: 3.5.2
+  resolution: "@react-aria/focus@npm:3.5.2"
+  dependencies:
+    "@babel/runtime": ^7.6.2
+    "@react-aria/interactions": ^3.8.1
+    "@react-aria/utils": ^3.11.2
+    "@react-types/shared": ^3.11.1
+    clsx: ^1.1.1
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1
+  checksum: 448d11b41d693e96c9df53148076acb24bc6cf0166fe88a0ad5df1ebde4346a673920418b1b12f2abc5770269289223b5d3c164fcf06c7041487ee0d90423f08
+  languageName: node
+  linkType: hard
+
 "@react-aria/i18n@npm:^3.3.3":
   version: 3.3.4
   resolution: "@react-aria/i18n@npm:3.3.4"
@@ -6947,7 +6962,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-aria/interactions@npm:3.8.1":
+"@react-aria/interactions@npm:3.8.1, @react-aria/interactions@npm:^3.8.1":
   version: 3.8.1
   resolution: "@react-aria/interactions@npm:3.8.1"
   dependencies:
@@ -7196,17 +7211,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-stately/toggle@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "@react-stately/toggle@npm:3.2.3"
+"@react-stately/toggle@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "@react-stately/toggle@npm:3.2.5"
   dependencies:
     "@babel/runtime": ^7.6.2
-    "@react-stately/utils": ^3.2.2
-    "@react-types/checkbox": ^3.2.3
-    "@react-types/shared": ^3.8.0
+    "@react-stately/utils": ^3.4.1
+    "@react-types/checkbox": ^3.2.5
+    "@react-types/shared": ^3.11.1
   peerDependencies:
     react: ^16.8.0 || ^17.0.0-rc.1
-  checksum: 8bd8962d1c1c629c1d800692679caf8ea2d8bd72b6545bff3e8786d2b5fc312ce98eee1b99dbe2104baba61d14129c909ad8ccd8f80f50dae9e2056925d45fbc
+  checksum: 7ea5950173f0e8f4e568eeaccc36bf3c7cc81477eef4c9efa989c6960b16cb121bc0738c2e39e9a5738c8c05702d98a5b70cad372f06c8a2e124d314226389dc
   languageName: node
   linkType: hard
 
@@ -7269,14 +7284,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-types/checkbox@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "@react-types/checkbox@npm:3.2.3"
+"@react-types/button@npm:^3.4.3":
+  version: 3.4.3
+  resolution: "@react-types/button@npm:3.4.3"
   dependencies:
-    "@react-types/shared": ^3.8.0
+    "@react-types/shared": ^3.11.1
   peerDependencies:
     react: ^16.8.0 || ^17.0.0-rc.1
-  checksum: e9d4371fff8e4e9460346f7cc715df8f10051860b8b3f4bf0773267f653e6541ce50ca6548822742e43972682c9c0ff9d72ecb364ee62779e07dac85086157c5
+  checksum: 2feda1b4d1d1d532373ba0ae996676a66170d775b9142969f9d47c7d0e7c25dbdccbd04026b4649337b2040fdc6d35a2736514edde89ec802fabc3d631f711de
+  languageName: node
+  linkType: hard
+
+"@react-types/checkbox@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "@react-types/checkbox@npm:3.2.5"
+  dependencies:
+    "@react-types/shared": ^3.11.1
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1
+  checksum: 147f7520c3f437863f77713ccbfe1546d49fa4dfa2c29b61f8a074f16faa28f8fa491d7d7316e7f6834cbc7c2a18820d9db9ffdd863c1b2bac2ac74d0628d56a
   languageName: node
   linkType: hard
 
@@ -20399,7 +20425,7 @@ __metadata:
     "@opentelemetry/semantic-conventions": 1.0.1
     "@pmmmwh/react-refresh-webpack-plugin": 0.5.4
     "@popperjs/core": 2.11.2
-    "@react-aria/button": 3.3.4
+    "@react-aria/button": 3.4.1
     "@react-aria/dialog": 3.1.4
     "@react-aria/focus": 3.5.0
     "@react-aria/interactions": 3.8.1
