@@ -20,6 +20,7 @@ import { DashboardSearchHit } from '../../search/types';
 import { getLibraryPanel } from '../../library-panels/state/api';
 import { LibraryElementDTO, LibraryElementKind } from '../../library-panels/types';
 import { LibraryElementExport } from '../../dashboard/components/DashExportModal/DashboardExporter';
+import { getDashboardSrv } from 'app/features/dashboard/services/DashboardSrv';
 
 export function fetchGcomDashboard(id: string): ThunkResult<void> {
   return async (dispatch) => {
@@ -265,12 +266,7 @@ export interface SaveDashboardOptions {
 export function saveDashboard(options: SaveDashboardOptions) {
   dashboardWatcher.ignoreNextSave();
 
-  return getBackendSrv().post('/api/dashboards/db/', {
-    dashboard: options.dashboard,
-    message: options.message ?? '',
-    overwrite: options.overwrite ?? false,
-    folderId: options.folderId,
-  });
+  return getDashboardSrv().saveDashboard(options);
 }
 
 function deleteFolder(uid: string, showSuccessAlert: boolean) {

@@ -1,11 +1,18 @@
 import { appEvents } from 'app/core/app_events';
 import { DashboardModel } from '../state/DashboardModel';
 import { removePanel } from '../utils/panel';
-import { DashboardMeta } from 'app/types';
+import { DashboardDataDTO, DashboardMeta } from 'app/types';
 import { getBackendSrv } from 'app/core/services/backend_srv';
 import { saveDashboard } from 'app/features/manage-dashboards/state/actions';
 import { RemovePanelEvent } from '../../../types/events';
+import { BackendSrvRequest } from '@grafana/runtime';
 
+interface SaveDashboardOptions {
+  dashboard: DashboardDataDTO;
+  message?: string;
+  folderId?: number;
+  overwrite?: boolean;
+}
 export class DashboardSrv {
   dashboard?: DashboardModel;
 
@@ -40,6 +47,16 @@ export class DashboardSrv {
     return saveDashboard({
       dashboard: parsedJson,
       folderId: this.dashboard?.meta.folderId || parsedJson.folderId,
+    });
+  }
+
+  // TODO: what should be made available in `requestOptions`?
+  saveDashboard(data: SaveDashboardOptions, requestOptions?: Pick<BackendSrvRequest, 'showErrorAlert'>) {
+    return getBackendSrv().request({
+      url: '/api/dashboards/db/',
+      method: 'POST',
+      data,
+      ...requestOptions,
     });
   }
 
